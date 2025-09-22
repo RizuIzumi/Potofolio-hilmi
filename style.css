@@ -266,3 +266,28 @@ html, body {
     width: 90%;
   }
 }
+/* ====== Download Button ====== */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(90deg, var(--blue-1), var(--blue-2));
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 168, 255, 0.3);
+}
+
+.download-btn i {
+  font-size: 16px;
+}
+
+.download-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 168, 255, 0.6);
+  background: linear-gradient(90deg, var(--blue-2), var(--blue-1));
+}
+
