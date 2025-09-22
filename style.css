@@ -1,0 +1,168 @@
+:root {
+  --bg:#05060a;
+  --blue-1:#00a8ff;
+  --blue-2:#0b4db1;
+  --glass: rgba(255,255,255,0.04);
+  --accent: linear-gradient(90deg,var(--blue-1),#4bb0ff 50%,var(--blue-2));
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  height: 100%;
+  background: url("Dekstop Background_2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #dbeeff;
+}
+
+.stage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  perspective: 1200px;
+  position: relative;
+}
+
+.scene {
+  width: 1000px;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 24px;
+  padding: 28px;
+  border-radius: 26px;
+  background: var(--glass);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  transform: translateZ(60px);
+}
+
+.profile {
+  background: linear-gradient(180deg, rgba(11,77,177,0.12), rgba(0,0,0,0.15));
+  padding: 22px;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 3px solid var(--blue-1);
+}
+
+.content h1 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.contacts {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contacts a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--glass);
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--blue-1);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.contacts a i {
+  font-size: 18px;
+}
+
+.contacts a:hover {
+  background: var(--blue-2);
+  color: #fff;
+}
+
+
+/* ====== Karya ====== */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.project-card {
+  background: linear-gradient(145deg, rgba(0,168,255,0.1), rgba(11,77,177,0.1));
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.6);
+}
+.skills {
+  margin-top: 30px;
+}
+
+.skills h2 {
+  margin-bottom: 15px;
+  color: var(--blue-1);
+}
+
+.skill {
+  margin-bottom: 12px;
+}
+
+.skill span {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.progress {
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 22px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--blue-1), var(--blue-2));
+  text-align: right;
+  padding-right: 6px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 10px 0 0 10px;
+  transition: width 1s ease-in-out;
+}
+/* Bagian Visi */
+.vision {
+  margin-top: 40px;
+}
+
+.vision h2 {
+  margin-bottom: 12px;
+  color: var(--blue-1);
+}
+
+.vision ul {
+  list-style: "🌏 ";
+  padding-left: 20px;
+}
+
+.vision li {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
