@@ -7,15 +7,21 @@
   font-family: 'Inter', system-ui, sans-serif;
 }
 
-* { box-sizing: border-box; }
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0;
+}
 html, body {
   margin: 0;
   height: 100%;
   background: url("Dekstop Background_2.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #dbeeff;
+  font-family: 'Inter', system-ui, sans-serif;
 }
 
+/* ====== Stage & Scene ====== */
 .stage {
   min-height: 100vh;
   display: flex;
@@ -39,6 +45,7 @@ html, body {
   transform: translateZ(60px);
 }
 
+/* ====== Profile ====== */
 .profile {
   background: linear-gradient(180deg, rgba(11,77,177,0.12), rgba(0,0,0,0.15));
   padding: 22px;
@@ -55,11 +62,18 @@ html, body {
   border: 3px solid var(--blue-1);
 }
 
+/* ====== Content ====== */
 .content h1 {
   font-size: 2rem;
   margin-top: 0;
 }
 
+.content p {
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* ====== Contacts ====== */
 .contacts {
   margin-top: 18px;
   display: flex;
@@ -88,7 +102,6 @@ html, body {
   color: #fff;
 }
 
-
 /* ====== Karya ====== */
 .projects {
   display: grid;
@@ -110,6 +123,8 @@ html, body {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 12px 28px rgba(0,0,0,0.6);
 }
+
+/* ====== Skills ====== */
 .skills {
   margin-top: 30px;
 }
@@ -147,7 +162,8 @@ html, body {
   border-radius: 10px 0 0 10px;
   transition: width 1s ease-in-out;
 }
-/* Bagian Visi */
+
+/* ====== Visi ====== */
 .vision {
   margin-top: 40px;
 }
@@ -165,4 +181,66 @@ html, body {
 .vision li {
   margin-bottom: 8px;
   font-weight: 600;
+}
+
+/* ====== Responsif ====== */
+@media (max-width: 992px) {
+  .scene {
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .scene {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .profile {
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  .avatar {
+    width: 140px;
+    height: 140px;
+  }
+
+  .content h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .projects {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .scene {
+    padding: 16px;
+  }
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .contacts a {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .progress {
+    height: 18px;
+  }
+
+  .progress-bar {
+    font-size: 11px;
+  }
+
+  .content p {
+    font-size: 14px;
+    text-align: center;
+  }
 }
