@@ -66,6 +66,7 @@ html, body {
 .content h1 {
   font-size: 2rem;
   margin-top: 0;
+  color: var(--blue-1);
 }
 
 .content p {
@@ -108,6 +109,7 @@ html, body {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
   margin: 16px 0;
+  justify-items: center;
 }
 
 .project-card {
@@ -117,6 +119,8 @@ html, body {
   padding: 16px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
   transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 280px;
 }
 
 .project-card:hover {
@@ -186,19 +190,29 @@ html, body {
 /* ====== Responsif ====== */
 @media (max-width: 992px) {
   .scene {
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .profile {
+    margin: 0 auto 20px auto;
+    max-width: 400px;
+  }
+
+  .content {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  .content h1,
+  .content p {
+    text-align: center;
   }
 }
 
 @media (max-width: 768px) {
   .scene {
-    grid-template-columns: 1fr;
     padding: 20px;
-  }
-
-  .profile {
-    order: -1;
-    margin-bottom: 20px;
   }
 
   .avatar {
@@ -208,11 +222,10 @@ html, body {
 
   .content h1 {
     font-size: 1.5rem;
-    text-align: center;
   }
 
   .projects {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
 }
 
@@ -229,6 +242,7 @@ html, body {
   .contacts a {
     font-size: 14px;
     padding: 8px;
+    justify-content: center;
   }
 
   .progress {
@@ -241,6 +255,14 @@ html, body {
 
   .content p {
     font-size: 14px;
-    text-align: center;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .project-card {
+    width: 90%;
   }
 }
