@@ -50,7 +50,6 @@ html, body {
 /* Tambahan untuk HP kecil */
 @media (max-width: 768px) {
   .scene {
-    text-align: center;
     grid-template-columns: 1fr;  /* jadi satu kolom */
     width: 100%;                 /* biar nggak kepaksa 1000px */
     margin: 0 auto;              /* tetap center */
@@ -302,6 +301,7 @@ html, body {
   box-shadow: 0 6px 20px rgba(0, 168, 255, 0.6);
   background: linear-gradient(90deg, var(--blue-2), var(--blue-1));
 }
+
 
 
 
