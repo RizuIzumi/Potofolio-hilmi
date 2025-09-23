@@ -25,7 +25,6 @@ html, body {
 /* ====== Stage & Scene ====== */
 .stage {
   min-height: 100vh;
-  display: flex;
   align-items: 0 ;
   justify-content: 0 ;
   padding: 48px 24px;
@@ -300,6 +299,7 @@ html, body {
   box-shadow: 0 6px 20px rgba(0, 168, 255, 0.6);
   background: linear-gradient(90deg, var(--blue-2), var(--blue-1));
 }
+
 
 
 
