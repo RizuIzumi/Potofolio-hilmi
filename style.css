@@ -46,6 +46,14 @@ html, body {
   box-shadow: 0 20px 60px rgba(0,0,0,0.6);
   transform: translateZ(60px);
 }
+/* Tambahan untuk HP kecil */
+@media (max-width: 768px) {
+  .scene {
+    grid-template-columns: 1fr;  /* jadi satu kolom */
+    width: 100%;                 /* biar nggak kepaksa 1000px */
+    margin: 0 auto;              /* tetap center */
+  }
+}
 
 /* ====== Profile ====== */
 .profile {
@@ -292,5 +300,6 @@ html, body {
   box-shadow: 0 6px 20px rgba(0, 168, 255, 0.6);
   background: linear-gradient(90deg, var(--blue-2), var(--blue-1));
 }
+
 
 
